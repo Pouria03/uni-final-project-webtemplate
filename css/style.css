@@ -92,7 +92,7 @@ section{
 }
 
 .intro-section .the-intro-desc{
-    color: black;
+    color: var(--background-color);
 }
 
 .intro-section .intro-video{
