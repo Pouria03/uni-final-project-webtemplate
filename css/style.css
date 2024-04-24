@@ -1,7 +1,8 @@
 :root{
-    --main-color: #222831;
-    --second-color : rgba(10, 10, 148, 0.753);
-    --third-color : #c0b629;
+    --background-color : #EEF3F9;
+    --main-color: #66999b;
+    --second-color : #2b3a67;
+    --third-color : #ffc482;
 }
 
 @font-face {
@@ -20,10 +21,11 @@ body{
     font-family: vazir, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
-.logo{
-    color: var(--third-color);
+.logo:hover{
+    color: var(--second-color);
 
 }
 
@@ -35,6 +37,18 @@ body{
 header{
     background-color: var(--main-color);
     align-items: baseline;
+    padding: 5px 15px;
+    z-index: 10;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background-color: rgba(5, 5, 5, 0);
+    box-shadow: 0 4px 30px rgba(194, 192, 192, 0.1);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px); */
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -43,12 +57,14 @@ header{
 
 .navbar-nav .nav-link,
 .navbar-nav .dropdown-item {
-    color: white !important;
+    color: black !important;
 }
 
 section{
-    padding-top: 50px;
-    min-height: 100vh;
+    padding: 80px 10px;
+    height: 100%;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
 }
 
 .section-title-first-word{
@@ -92,7 +108,23 @@ section{
 
 section .section-title{
     text-align: center;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
+    position: relative;
+    
+    /* border-bottom: 2px solid black; */
+}
+
+section .section-title::before{
+    content: "";
+    position: absolute;
+    left    : 38%;
+    bottom  : 0;
+    width   : 25%;  /* or 100px */
+    border-bottom: 3px dashed var(--second-color);
+}
+
+.why-us-section{
+    background-color: #66999b;
 }
 
 .services,
@@ -103,6 +135,7 @@ section .section-title{
     justify-content: space-around ;
     gap: 50px;
     flex-wrap: wrap;
+    padding-top: 25px;
 }
 
 .service-card,
@@ -111,10 +144,10 @@ section .section-title{
     border-radius: 15px;
     text-align: center;
     padding: 20px;
-    color: var(--third-color);
+    color: var(--second-color);
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: var(--main-color);
+    background-color: #fff;
 }
 
 
@@ -193,7 +226,7 @@ footer .info a{
 footer .info p,
 footer .info svg,
 footer .info a{
-    color: white;
+    color: var(--second-color);
 
 }
 
@@ -209,7 +242,7 @@ footer .info .info-item{
 }
 
 footer .copy{
-    color: white;
+    color: var(--second-color);
     text-align: center;
     border-top: 1px solid rgba(218, 218, 218, 0.582);
     padding: 10px;
@@ -227,7 +260,8 @@ footer .copy{
 /* about-us page */
 .about-top-section{
     background-color: var(--main-color);
-    color: #cacaca;
+    /* color: var(--third-color); */
+    position: relative;
 }
 
 .about-boss{
@@ -246,8 +280,8 @@ footer .copy{
 
 .accordion-body,
 .accordion-button{
-    background-color: var(--main-color);
-    color: #cacaca;
+    background-color: #fff;
+    color: var(--main-color);
 }
 
 @keyframes arrowDown{
@@ -260,12 +294,13 @@ footer .copy{
     display: inline-block;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 1;
     animation: arrowDown infinite 1s linear;
+
 }
 
 .about-boss-section .about-boss .about-boss-desc{
-    background-color: var(--main-color);
+    background-color: var(--second-color);
     color: #cacaca;
     padding: 30px 10px 30px 10px;
     border-radius: 15px;
@@ -274,11 +309,15 @@ footer .copy{
 
 /* blog page */
 .posts-section .container .card{
-    background-color: var(--main-color);
+    background-color: #fff;
 }
 
 .posts-section .container .card .card-text{
-    color: #cacaca !important;
+    color: rgb(34, 34, 34) !important;
+}
+
+.card .card-title{
+    color: var(--second-color);
 }
 
 
@@ -286,7 +325,25 @@ footer .copy{
 .post-detail-title,
 .counseling-title-section{
     background-color: var(--main-color);
-    min-height: 50vh;
+    /* min-height: 50vh; */
+}
+
+.contact-form{
+    background-color: var(--main-color);
+}
+
+.contact-form-title{
+    color: var(--main-color);
+}
+
+.contact-form .btn{
+    color: var(--main-color);
+    background-color: var(--third-color);
+}
+
+.contact-display-btn{
+    background-color: var(--second-color);
+    color: #fff;
 }
 
 .post-detail-title h2{
