@@ -91,6 +91,10 @@ section{
     flex: 1;
 }
 
+.intro-section .the-intro-desc{
+    color: black;
+}
+
 .intro-section .intro-video{
     flex: 1;
 }
@@ -226,7 +230,7 @@ footer .info a{
 footer .info p,
 footer .info svg,
 footer .info a{
-    color: var(--second-color);
+    color: rgb(51, 51, 51);
 
 }
 
@@ -242,7 +246,7 @@ footer .info .info-item{
 }
 
 footer .copy{
-    color: var(--second-color);
+    color: rgb(51, 51, 51);
     text-align: center;
     border-top: 1px solid rgba(218, 218, 218, 0.582);
     padding: 10px;
